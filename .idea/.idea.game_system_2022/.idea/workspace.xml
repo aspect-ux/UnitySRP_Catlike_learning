@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="69ae1857-f4c1-403c-aee7-af5ed04c9a8a" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CBF0A658-BE6B-4A09-B610-D7D2917B90F1/78/c50ef015/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Rendering/Shaders/NPR_ver1.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MoveMent/MovingSphere.cs" />
+        <option value="$PROJECT_DIR$/Assets/Rendering/TestPostProcessURP/postprocessTest.shader" />
+        <option value="$PROJECT_DIR$/Assets/Rendering/TestPostProcessURP/Test.cs" />
+        <option value="$PROJECT_DIR$/Assets/Rendering/TestPostProcessURP/FastMobileToURP.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraMoveMent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/CameraMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Base/EventCenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Base/MonoController.cs" />
+        <option value="$PROJECT_DIR$/Assets/CustomRP/ShaderLibrary/Lighting.hlsl" />
+        <option value="$PROJECT_DIR$/Assets/CustomRP/Shaders/Lit.shader" />
+        <option value="$PROJECT_DIR$/Assets/CustomRP/CustomRP/CameraRenderer.cs" />
+        <option value="$PROJECT_DIR$/Assets/CustomRP/Shaders/Unlit.shader" />
+        <option value="$PROJECT_DIR$/Assets/CustomRP/Shaders/UnlitPass.hlsl" />
+        <option value="$PROJECT_DIR$/Assets/CustomRP/Shaders/LitPass.hlsl" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2HRDq9VV1S7Qx3RVLytBmBe6vV8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="CodeInspectionSettingsId" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="D:\Unity\unity_edit_path\2021.3.6f1c1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\Unity\Project\Test\GameSystem\game_system_2022 -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="D:\Unity\Project\Test\GameSystem\game_system_2022" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <created>1668239210677</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668239210677</updated>
+      <workItem from="1668239210681" duration="13000" />
+      <workItem from="1668239321006" duration="15000" />
+      <workItem from="1668239393441" duration="4000" />
+      <workItem from="1668239786609" duration="4000" />
+      <workItem from="1668240269583" duration="13000" />
+      <workItem from="1668240391528" duration="354000" />
+      <workItem from="1668240768860" duration="34000" />
+      <workItem from="1668245711511" duration="155000" />
+      <workItem from="1668254903750" duration="1063000" />
+      <workItem from="1668362954610" duration="255000" />
+      <workItem from="1669472107739" duration="1385000" />
+      <workItem from="1669881675940" duration="4906000" />
+      <workItem from="1669894796009" duration="2137000" />
+      <workItem from="1669902735877" duration="1556000" />
+      <workItem from="1670002392026" duration="1702000" />
+      <workItem from="1670023778755" duration="185000" />
+      <workItem from="1670030251844" duration="339000" />
+      <workItem from="1674095413989" duration="2686000" />
+      <workItem from="1676348736816" duration="219000" />
+      <workItem from="1676361709093" duration="2115000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="266" y="114" key="SettingsEditor" timestamp="1676362143892">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="266" y="114" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1676362143892" />
+    <state x="290" y="115" width="955" height="594" key="find.popup" timestamp="1674096288091">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="290" y="115" width="955" height="594" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1674096288091" />
+  </component>
+</project>
