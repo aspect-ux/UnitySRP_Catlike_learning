@@ -37,7 +37,7 @@ public partial class CameraRenderer
 
     //static Material errorMaterial;
 
-    public void Render(ScriptableRenderContext context, Camera camera, bool useDynamicBatching, bool useGPUInstancing)
+    public void Render(ScriptableRenderContext context, Camera camera, bool useDynamicBatching, bool useGPUInstancing, ShadowSettings shadowSettings)
     {
         this.context = context;
         this.camera = camera;
@@ -47,17 +47,28 @@ public partial class CameraRenderer
 
         PrepareForSceneWindow();//???cull??????UI???????
 
-        if (!Cull()) return;//Culling
+        if (!Cull(shadowSettings.maxDistance)) return;//Culling
+
+        //Setup();
+
+        //region:include lighting.Setup(...)将阴影包含在mainCamera buffer下
+        buffer.BeginSample(SampleName);
+        ExecuteBuffer();
+
+        lighting.Setup(context,cullingResults, shadowSettings);//set up light
+
+        buffer.EndSample(SampleName);
+        //region
 
         Setup();
-
-        lighting.Setup(context,cullingResults);//set up light
 
         DrawVisibleGeometry(useDynamicBatching, useGPUInstancing);
 
         DrawUnsupportedShaders();
 
         DrawGizmos();
+
+        lighting.Cleanup();//clean up before submit
 
         Submit();
 
@@ -153,10 +164,11 @@ public partial class CameraRenderer
         buffer.Clear();
     }
 
-    bool Cull()
+    bool Cull(float maxShadowDistance)
     {
         if (camera.TryGetCullingParameters(out ScriptableCullingParameters p))
         {
+            p.shadowDistance = Mathf.Min(maxShadowDistance, camera.farClipPlane);
             cullingResults = context.Cull(ref p);
             return true;
         }
