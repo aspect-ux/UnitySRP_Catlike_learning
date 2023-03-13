@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.Rendering;
 using Unity.Collections;
 
@@ -8,7 +8,7 @@ public class Lighting
 	
 	const string bufferName = "Lighting";
 
-	//×î´ó·½Ïò¹âÔ´ÊıÁ¿
+	//æœ€å¤§æ–¹å‘å…‰æºæ•°é‡
 	private const int maxDirLightCount = 4;
 
 	CommandBuffer buffer = new CommandBuffer
@@ -51,27 +51,27 @@ public class Lighting
 		//native memory buffer,make it possible to fastly share data between c# and unity engine code
 		NativeArray<VisibleLight> visibleLights = cullingResults.visibleLights;
 
-		//Ñ­»·ÅäÖÃÁ½¸öVectorÊı×é
+		//å¾ªç¯é…ç½®ä¸¤ä¸ªVectoræ•°ç»„
 		int dirLightCount = 0;
 		for (int i = 0; i < visibleLights.Length; i++)
 		{
 			VisibleLight visibleLight = visibleLights[i];
 
-			//Ö»ÅäÖÃ·½Ïò¹âÔ´
+			//åªé…ç½®æ–¹å‘å…‰æº
 			if (visibleLight.lightType == LightType.Directional)
 			{
-				//ÉèÖÃÊı×éÖĞµ¥¸ö¹âÔ´µÄÊôĞÔ
+				//è®¾ç½®æ•°ç»„ä¸­å•ä¸ªå…‰æºçš„å±æ€§
 				SetupDirectionalLight(dirLightCount++, ref visibleLight);
 				if (dirLightCount >= maxDirLightCount)
 				{
-					//×î´ó²»³¬¹ı4¸ö·½Ïò¹âÔ´
+					//æœ€å¤§ä¸è¶…è¿‡4ä¸ªæ–¹å‘å…‰æº
 					break;
 				}
 			}
 		}
 
-		//´«µİµ±Ç°ÓĞĞ§¹âÔ´Êı¡¢¹âÔ´ÑÕÉ«VectorÊı×é¡¢¹âÔ´·½ÏòVectorÊı×é¡£
-		//²»¹ÜÎÒÃÇÊµ¼Ê´«µİ¸øGPUµÄÊÇ¼¸Î¬Vector£¬Æä´«µİµÄVectorÊÇºãÎªVector4µÄ
+		//ä¼ é€’å½“å‰æœ‰æ•ˆå…‰æºæ•°ã€å…‰æºé¢œè‰²Vectoræ•°ç»„ã€å…‰æºæ–¹å‘Vectoræ•°ç»„ã€‚
+		//ä¸ç®¡æˆ‘ä»¬å®é™…ä¼ é€’ç»™GPUçš„æ˜¯å‡ ç»´Vectorï¼Œå…¶ä¼ é€’çš„Vectoræ˜¯æ’ä¸ºVector4çš„
 		buffer.SetGlobalInt(dirLightCountId, visibleLights.Length);
 		buffer.SetGlobalVectorArray(dirLightColorsId, dirLightColors);
 		buffer.SetGlobalVectorArray(dirLightDirectionsId, dirLightDirections);
@@ -80,9 +80,9 @@ public class Lighting
 
 	void SetupDirectionalLight(int index, ref VisibleLight visibleLight) 
 	{
-		//VisibleLight.finalColorÎª¹âÔ´ÑÕÉ«£¨Êµ¼ÊÊÇ¹âÔ´ÑÕÉ«*¹âÔ´Ç¿¶È£¬µ«ÊÇÄ¬ÈÏ²»ÊÇÏßĞÔÑÕÉ«¿Õ¼ä£¬ĞèÒª½«Graphics.lightsUseLinearIntensityÉèÖÃÎªtrue£©
+		//VisibleLight.finalColorä¸ºå…‰æºé¢œè‰²ï¼ˆå®é™…æ˜¯å…‰æºé¢œè‰²*å…‰æºå¼ºåº¦ï¼Œä½†æ˜¯é»˜è®¤ä¸æ˜¯çº¿æ€§é¢œè‰²ç©ºé—´ï¼Œéœ€è¦å°†Graphics.lightsUseLinearIntensityè®¾ç½®ä¸ºtrueï¼‰
 		dirLightColors[index] = visibleLight.finalColor;
-		//¹âÔ´·½ÏòÎª¹âÔ´localToWorldMatrixµÄµÚÈıÁĞ£¬ÕâÀïÒ²ĞèÒªÈ¡·´
+		//å…‰æºæ–¹å‘ä¸ºå…‰æºlocalToWorldMatrixçš„ç¬¬ä¸‰åˆ—ï¼Œè¿™é‡Œä¹Ÿéœ€è¦å–å
 		dirLightDirections[index] = -visibleLight.localToWorldMatrix.GetColumn(2);
 		//reserve shadows
 		dirLightShadowData[index] = shadows.ReserveDirectionalShadows(visibleLight.light, index);

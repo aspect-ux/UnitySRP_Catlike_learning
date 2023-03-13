@@ -17,7 +17,16 @@ public class Shadows
 
 	ShadowSettings settings;
 
+	//支持阴影的光照最多只有4个,每个光照的级联图最多也只有4个
 	const int maxShadowedDirectionalLightCount = 4,maxCascades = 4;
+
+	//软阴影pcf过滤模式Shader关键字
+	private static string[] directionalFilterKeywords =
+	{
+		"_DIRECTIONAL_PCF3",
+		"_DIRECTIONAL_PCF5",
+		"_DIRECTIONAL_PCF7"
+	};
 
 	struct ShadowedDirectionalLight
 	{
@@ -101,6 +110,7 @@ public class Shadows
 		buffer.BeginSample(bufferName);
 		ExecuteBuffer();
 
+		//一共的阴影图块数
 		int tiles = ShadowedDirectionalLightCount * settings.directional.cascadeCount;
 		int split = tiles <= 1 ? 1 : tiles <= 4 ? 2 : 4;
 		//int split = ShadowedDirectionalLightCount <= 1 ? 1 : 2;
@@ -161,8 +171,8 @@ public class Shadows
 				SetTileViewport(tileIndex, split, tileSize), split
 			);
 			buffer.SetViewProjectionMatrices(viewMatrix, projectionMatrix);
-			//buffer.SetGlobalDepthBias(500000f, 0f);
-			buffer.SetGlobalDepthBias(0f, light.slopeScaleBias);
+			buffer.SetGlobalDepthBias(500000f, 0f);
+			//buffer.SetGlobalDepthBias(0f, light.slopeScaleBias);
 			ExecuteBuffer();
 			context.DrawShadows(ref shadowSettings);
 			buffer.SetGlobalDepthBias(0f, 0f);

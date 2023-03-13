@@ -2856,7 +2856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &510202042
 Light:
   m_ObjectHideFlags: 0
@@ -4409,7 +4409,6 @@ GameObject:
   m_Component:
   - component: {fileID: 738627766}
   - component: {fileID: 738627765}
-  - component: {fileID: 738627767}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -4494,26 +4493,6 @@ Transform:
   m_Father: {fileID: 1757698816}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 47.345, y: -16.902, z: 0.002}
---- !u!114 &738627767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 738627764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &741234756
 GameObject:
   m_ObjectHideFlags: 0
@@ -7447,7 +7426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &1403339796
 Light:
   m_ObjectHideFlags: 0
@@ -8567,7 +8546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &1626137679
 Light:
   m_ObjectHideFlags: 0

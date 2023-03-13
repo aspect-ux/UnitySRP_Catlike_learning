@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
+//创建可编辑面板资源
 [CreateAssetMenu(menuName = "Rendering/Custom Render Pipeline")]
 public class CustomRenderPipelineAsset : RenderPipelineAsset
 {
